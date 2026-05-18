@@ -652,3 +652,128 @@
     grid-template-columns: 1fr;
   }
 }
+/* ── CV SECTION ── */
+#cv {
+  padding: 120px 5%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.cv-header {
+  margin-bottom: 48px;
+}
+.cv-header .section-label {
+  justify-content: center;
+}
+.cv-header .section-label::before {
+  display: none;
+}
+.cv-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 36px;
+  transition: all 0.4s;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.cv-card:hover {
+  border-color: rgba(0, 212, 255, 0.35);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.12);
+  transform: translateY(-4px);
+}
+.cv-card-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.cv-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--accent2);
+  flex-shrink: 0;
+}
+.cv-filename {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.cv-details {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+.cv-card-right {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cv-download-btn,
+.cv-preview-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+.cv-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cv-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  transition: all 0.3s;
+}
+.cv-highlight-item i {
+  font-size: 1.1rem;
+  color: var(--accent2);
+}
+.cv-highlight-item:hover {
+  border-color: rgba(0, 212, 255, 0.3);
+  color: var(--text);
+  background: rgba(0, 212, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .cv-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+  .cv-card-right {
+    width: 100%;
+  }
+  .cv-download-btn,
+  .cv-preview-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
