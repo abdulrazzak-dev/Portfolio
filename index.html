@@ -908,23 +908,14 @@ const certDownBtn = document.getElementById('certDown');
 const certCurrentEl = document.getElementById('certCurrent');
 let certCurrent = 0;
 const certTotal = certSlides.length;
+const SLIDE_H = 420; // must match your CSS height
 
 function goToCert(n) {
   certCurrent = (n + certTotal) % certTotal;
-
-  // Slide track vertically
-  certTrack.style.transform = `translateY(-${certCurrent * 100}%)`;
-
-  // Active slide image
+  certTrack.style.transform = `translateY(-${certCurrent * SLIDE_H}px)`;
   certSlides.forEach((s, i) => s.classList.toggle('active', i === certCurrent));
-
-  // Active info
   certInfoItems.forEach((item, i) => item.classList.toggle('active', i === certCurrent));
-
-  // Active dot
   certDots.forEach((d, i) => d.classList.toggle('active', i === certCurrent));
-
-  // Counter
   certCurrentEl.textContent = String(certCurrent + 1).padStart(2, '0');
 }
 
@@ -932,14 +923,12 @@ certUpBtn.addEventListener('click', () => goToCert(certCurrent - 1));
 certDownBtn.addEventListener('click', () => goToCert(certCurrent + 1));
 certDots.forEach(d => d.addEventListener('click', () => goToCert(+d.dataset.index)));
 
-// Auto-play
 let certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
 certTrack.addEventListener('mouseenter', () => clearInterval(certAuto));
 certTrack.addEventListener('mouseleave', () => {
   certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
 });
 
-// Touch swipe vertical
 let certTouchY = 0;
 certTrack.addEventListener('touchstart', e => { certTouchY = e.touches[0].clientY; });
 certTrack.addEventListener('touchend', e => {
@@ -947,7 +936,6 @@ certTrack.addEventListener('touchend', e => {
   if (Math.abs(diff) > 40) goToCert(diff > 0 ? certCurrent + 1 : certCurrent - 1);
 });
 
-// Init first slide active
 goToCert(0);
 </script>
 </body>
