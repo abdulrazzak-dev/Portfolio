@@ -45,7 +45,7 @@ I'm a passionate **Frontend Web Developer** from Sri Lanka, dedicated to buildin
 
 ### Design & Animation
 ![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=black)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
 ![Spline 3D](https://img.shields.io/badge/Spline%203D-000000?style=for-the-badge&logo=spline&logoColor=white)
 
 ### Tools & Workflow
