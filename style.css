@@ -221,6 +221,106 @@
     }
     .tool-chip:hover { border-color: var(--accent2); color: var(--text); }
     .tool-chip i { font-size: 0.9rem; color: var(--accent2); }
+
+     /* Home Section */
+    #Home {
+      width: 100%;
+      height: 100vh;
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      flex-direction: column;
+      text-align: left;
+      color: white;
+      position: relative;
+    }
+
+    #Home p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(2rem, 5vw, 5rem);
+      font-family: "Audiowide", sans-serif;
+      opacity: 0;
+      width: 100%;
+      padding: 0 20px;
+      animation: text 6s ease-in-out;
+    }
+
+    #Home p span {
+      color: var(--secondary-color);
+      text-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
+    }
+
+    #Home p:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    #Home p:nth-child(2) {
+      animation-delay: 3s;
+    }
+
+    #Home p:nth-child(3) {
+      animation-delay: 6s;
+    }
+
+    #Home p:nth-child(4) {
+      animation-delay: 9s;
+    }
+
+    @keyframes text {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+
+      80% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+    }
+    .hero-role-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 10px 0 0;
+  min-height: 2.2rem;
+}
+.hero-role {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--accent2), var(--accent3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04em;
+}
+.hero-role-cursor {
+  font-size: 1.4rem;
+  color: var(--accent2);
+  animation: blink 0.75s step-end infinite;
+  line-height: 1;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
     /* ── ABOUT (IMPROVED) ── */
     #about {
       padding: 120px 5%;

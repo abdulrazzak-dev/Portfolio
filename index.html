@@ -71,41 +71,48 @@
       Available for work
     </div>
     <h1 class="hero-h1">Hi, I'm<br><span class="name-highlight">Abdul Razzak</span></h1><br>
-     <!--home-->
-  <section id="Home">
-    <p class="text-center">I am a <span>Web Developer</span></p>
-    <p class="text-center">I am a <span>Cybersecurity Specialist</span></p>
-    <p class="text-center">I am a <span>Full Stack Developer</span> </p>
-    
-  </section>
+    <div class="hero-role-wrap">
+  <span class="hero-role" id="heroRole">Junior Software Developer</span>
+  <span class="hero-role-cursor">|</span>
+</div>
     <p class="hero-subtitle">Frontend crafting secure, immersive digital experiences that push the boundaries of the modern web.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="#contact" class="btn-outline">Hire Me</a>
     </div><br>
 
-    <div class="skill-pills" style="margin-bottom:22px">
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">GitHub</span>
-          <span class="skill-pill">VS Code</span>
-          <span class="skill-pill">Chrome DevTools</span>
-          <span class="skill-pill">Canva</span>
-          <span class="skill-pill">Spline 3D</span>
-          <span class="skill-pill">GitHub Pages</span>
-        </div>
-        <!-- Duplicate for infinite scroll -->
-        <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
-        <div class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-        <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
-        <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
-        <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
-        <div class="tool-chip"><i class="fa-brands fa-wordpress"></i> Bootstrap</div>
-        <div class="tool-chip"><i class="fa-solid fa-bolt"></i> GSAP</div>
-        <div class="tool-chip"><i class="fa-solid fa-cube"></i> Spline 3D</div>
-        <div class="tool-chip"><i class="fa-brands fa-figma"></i> Canva</div>
-        <div class="tool-chip"><i class="fa-solid fa-shield-halved"></i> Web Security</div>
-        <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
-        <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i>Chrome DevTools </div>
+    
+        <!-- Hero Tools Marquee — place this just before </div> of hero-content -->
+<div class="tools-marquee" style="margin-top: 28px; max-width: 680px;">
+  <div class="tools-track">
+    <!-- First set -->
+    <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
+    <div class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+    <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+    <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+    <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+    <div class="tool-chip"><i class="fa-brands fa-wordpress"></i> Bootstrap</div>
+    <div class="tool-chip"><i class="fa-solid fa-bolt"></i> GSAP</div>
+    <div class="tool-chip"><i class="fa-solid fa-cube"></i> Spline 3D</div>
+    <div class="tool-chip"><i class="fa-brands fa-figma"></i> Canva</div>
+    <div class="tool-chip"><i class="fa-solid fa-shield-halved"></i> Web Security</div>
+    <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
+    <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Chrome DevTools</div>
+    <!-- Duplicate set for seamless loop -->
+    <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
+    <div class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+    <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+    <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+    <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
+    <div class="tool-chip"><i class="fa-brands fa-wordpress"></i> Bootstrap</div>
+    <div class="tool-chip"><i class="fa-solid fa-bolt"></i> GSAP</div>
+    <div class="tool-chip"><i class="fa-solid fa-cube"></i> Spline 3D</div>
+    <div class="tool-chip"><i class="fa-brands fa-figma"></i> Canva</div>
+    <div class="tool-chip"><i class="fa-solid fa-shield-halved"></i> Web Security</div>
+    <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
+    <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Chrome DevTools</div>
+  </div>
+</div>
 
     <div class="hero-stats">
       <div class="stat-item">
@@ -197,6 +204,15 @@
       <h2 class="section-title" style="font-size: clamp(2rem,5vw,3.5rem)">My <span>Skills</span> & Expertise</h2>
       <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">A focused toolkit of modern web technologies, continuously growing with every project.</p>
     </div>
+    <div class="skill-pills" style="margin-bottom:22px">
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">VS Code</span>
+          <span class="skill-pill">Chrome DevTools</span>
+          <span class="skill-pill">Canva</span>
+          <span class="skill-pill">Spline 3D</span>
+          <span class="skill-pill">GitHub Pages</span>
+        </div>
 
     <div class="skills-categories">
 
@@ -753,6 +769,27 @@ function startMain() {
     { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8,
       scrollTrigger: { trigger: 'footer', start: 'top 92%', once: true } }
   );
+  // Cycling role titles
+const roles = [
+  'Junior Software Developer',
+  'Associate Full Stack Developer',
+  'Full Stack Developer',
+  'Front-End Specialist'
+];
+let ri = 0, ci = 0, deleting = false;
+const roleEl = document.getElementById('heroRole');
+function typeRole() {
+  const current = roles[ri];
+  if (!deleting) {
+    roleEl.textContent = current.slice(0, ++ci);
+    if (ci === current.length) { deleting = true; setTimeout(typeRole, 1800); return; }
+  } else {
+    roleEl.textContent = current.slice(0, --ci);
+    if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+  }
+  setTimeout(typeRole, deleting ? 45 : 90);
+}
+typeRole();
 }
 </script>
 </body>
