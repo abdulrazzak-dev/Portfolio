@@ -437,135 +437,198 @@
   <div class="cert-header reveal">
     <div class="section-label">Achievements</div>
     <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">Certificates & <span>Credentials</span></h2>
+    <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">Verified skills and completed courses across development, design, and AI.</p>
   </div>
-  
-    <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/Front - End Development mora.png" alt="Front-End Development" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/Front - End Development mora.png" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+  <div class="cert-slider-layout reveal">
+
+    <!-- Left: Vertical Slider -->
+    <div class="cert-slider-wrap">
+      <div class="cert-slider-track" id="certTrack">
+
+        <div class="cert-slide" data-index="0">
+          <div class="cert-slide-img">
+            <img src="image/Front - End Development mora.png" alt="Front-End Development" onerror="this.style.display='none'">
+          </div>
         </div>
+
+        <div class="cert-slide" data-index="1">
+          <div class="cert-slide-img">
+            <img src="image/web devlopment.png" alt="Web Development" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="2">
+          <div class="cert-slide-img">
+            <img src="image/simplilern 2026-05-30 at 16.01.03.jpeg" alt="Intro to HTML" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="3">
+          <div class="cert-slide-img">
+            <img src="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" alt="Front End Dev" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="4">
+          <div class="cert-slide-img">
+            <img src="image/Hp.jpeg" alt="AI for Beginners" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="5">
+          <div class="cert-slide-img">
+            <img src="image/hp data analitic.png" alt="Data Analytics" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="6">
+          <div class="cert-slide-img">
+            <img src="image/hp leadership.png" alt="Effective Leadership" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="7">
+          <div class="cert-slide-img">
+            <img src="image/claude 101.jpeg" alt="Claude 101" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="cert-slide" data-index="8">
+          <div class="cert-slide-img">
+            <img src="image/clauod.jpeg" alt="Claude Code 101" onerror="this.style.display='none'">
+          </div>
+        </div>
+
       </div>
-      <div class="cert-info">
-        <div class="cert-issuer">University of Moratuwa</div>
-        <div class="cert-name">Front-End Web Development</div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
+
+      <!-- Up / Down arrows -->
+      <button class="cert-arrow cert-arrow-up" id="certUp" aria-label="Previous">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+      <button class="cert-arrow cert-arrow-down" id="certDown" aria-label="Next">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
     </div>
-    <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/web devlopment.png" alt="Web Development" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/web devlopment.png" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+    <!-- Right: Info Panel -->
+    <div class="cert-info-panel">
+
+      <div class="cert-counter">
+        <span id="certCurrent">01</span>
+        <span class="cert-counter-sep"></span>
+        <span class="cert-counter-total">09</span>
+      </div>
+
+      <div class="cert-info-content" id="certInfoContent">
+
+        <div class="cert-info-item active" data-index="0">
+          <div class="cert-tag">University of Moratuwa</div>
+          <div class="cert-title">Front-End Web Development</div>
+          <div class="cert-desc">Comprehensive front-end development course covering HTML5, CSS3, JavaScript, and responsive design principles.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/Front - End Development mora.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
         </div>
+
+        <div class="cert-info-item" data-index="1">
+          <div class="cert-tag">University of Moratuwa</div>
+          <div class="cert-title">Web Development</div>
+          <div class="cert-desc">Full web development programme covering both front-end and back-end fundamentals with real-world projects.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> Sep 2025</span>
+            <a href="image/web devlopment.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="2">
+          <div class="cert-tag">Simplilearn</div>
+          <div class="cert-title">Introduction to HTML</div>
+          <div class="cert-desc">Foundational HTML course covering document structure, semantic elements, forms, and accessibility best practices.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> 17th May 2026</span>
+            <a href="image/simplilern 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="3">
+          <div class="cert-tag">Simplilearn</div>
+          <div class="cert-title">Introduction to Front End Development</div>
+          <div class="cert-desc">Core front-end skills including HTML, CSS, JavaScript and browser developer tools for modern web interfaces.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> 16th May 2026</span>
+            <a href="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="4">
+          <div class="cert-tag">HP</div>
+          <div class="cert-title">AI for Beginners</div>
+          <div class="cert-desc">Introduction to artificial intelligence concepts, machine learning basics, and practical AI applications in everyday tools.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/Hp.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="5">
+          <div class="cert-tag">HP</div>
+          <div class="cert-title">Data Analytics</div>
+          <div class="cert-desc">Data analysis fundamentals including data interpretation, visualisation techniques, and deriving actionable insights.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/hp data analitic.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="6">
+          <div class="cert-tag">HP</div>
+          <div class="cert-title">Effective Leadership</div>
+          <div class="cert-desc">Leadership skills covering team management, communication strategies, decision-making, and professional growth.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/hp leadership.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="7">
+          <div class="cert-tag">Anthropic</div>
+          <div class="cert-title">Claude 101</div>
+          <div class="cert-desc">Practical usage of Claude AI for productivity, creative work, coding assistance, and responsible AI interaction.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/claude 101.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="cert-info-item" data-index="8">
+          <div class="cert-tag">Anthropic</div>
+          <div class="cert-title">Claude Code 101</div>
+          <div class="cert-desc">Using Claude for software development workflows — code generation, debugging, refactoring, and AI-assisted engineering.</div>
+          <div class="cert-meta">
+            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+            <a href="image/clauod.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
       </div>
-      <div class="cert-info">
-        <div class="cert-issuer">University of Moratuwa</div>
-        <div class="cert-name">Web Development</div>
-        <div class="cert-date">Issued: Sep 2025</div>
+
+      <!-- Progress dots -->
+      <div class="cert-dots" id="certDots">
+        <span class="cert-dot active" data-index="0"></span>
+        <span class="cert-dot" data-index="1"></span>
+        <span class="cert-dot" data-index="2"></span>
+        <span class="cert-dot" data-index="3"></span>
+        <span class="cert-dot" data-index="4"></span>
+        <span class="cert-dot" data-index="5"></span>
+        <span class="cert-dot" data-index="6"></span>
+        <span class="cert-dot" data-index="7"></span>
+        <span class="cert-dot" data-index="8"></span>
       </div>
+
     </div>
   </div>
-  
-  <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/simplilern 2026-05-30 at 16.01.03.jpeg" alt="Introduction to HTML" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/simplilern 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">Simplilearn</div>
-        <div class="cert-name">Introduction to HTML</div>
-        <div class="cert-date">Issued: 17th May 2026</div>
-      </div>
-    </div>
-  </div>
-  <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" alt="Introduction to HTML" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">Simplilearn</div>
-        <div class="cert-name">Introduction to Front End Development </div>
-        <div class="cert-date">Issued: 16th May 2026</div>
-      </div>
-    </div>
-  </div>
-  <div class="cert-grid">
-    <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/Hp.jpeg" alt="AI for Beginners" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/Hp.jpeg" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">HP</div>
-        <div class="cert-name">AI for Beginners</div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
-    </div>
-  <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/hp data analitic.png" alt="Data Analytics" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/hp data analitic.png" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">HP</div>
-        <div class="cert-name">Data Analytics</div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
-    </div>
-  </div>
-  </div><div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/hp leadership.png" alt="Effective Leadership" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/hp leadership.png" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">hp</div>
-        <div class="cert-name">Effective Leadership</div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
-    </div>
-  </div>
-  
-  </div><div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/claude 101.jpeg" alt="Claude 101" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/claude 101.jpeg" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">ANTHROP\C</div>
-        <div class="cert-name">Claude 101 </div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
-    </div>
-  </div>
-  <div class="cert-card reveal">
-      <div class="cert-badge-wrap">
-        <img src="image/clauod.jpeg" alt="Claude Code 101" class="cert-img" onerror="this.style.display='none'">
-        <div class="cert-overlay">
-          <a href="image/clauod.jpeg" target="_blank" class="cert-view-btn">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-      </div>
-      <div class="cert-info">
-        <div class="cert-issuer">ANTHROP\C</div>
-        <div class="cert-name">Claude Code 101</div>
-        <div class="cert-date">Issued: May 2026</div>
-      </div>
-    </div>
-  
 </section>
 
 <!-- ── CV ── -->
@@ -835,6 +898,57 @@ function typeRole() {
 }
 typeRole();
 }
+/* ── CERTIFICATE VERTICAL SLIDER ── */
+const certTrack = document.getElementById('certTrack');
+const certSlides = document.querySelectorAll('.cert-slide');
+const certInfoItems = document.querySelectorAll('.cert-info-item');
+const certDots = document.querySelectorAll('.cert-dot');
+const certUpBtn = document.getElementById('certUp');
+const certDownBtn = document.getElementById('certDown');
+const certCurrentEl = document.getElementById('certCurrent');
+let certCurrent = 0;
+const certTotal = certSlides.length;
+
+function goToCert(n) {
+  certCurrent = (n + certTotal) % certTotal;
+
+  // Slide track vertically
+  certTrack.style.transform = `translateY(-${certCurrent * 100}%)`;
+
+  // Active slide image
+  certSlides.forEach((s, i) => s.classList.toggle('active', i === certCurrent));
+
+  // Active info
+  certInfoItems.forEach((item, i) => item.classList.toggle('active', i === certCurrent));
+
+  // Active dot
+  certDots.forEach((d, i) => d.classList.toggle('active', i === certCurrent));
+
+  // Counter
+  certCurrentEl.textContent = String(certCurrent + 1).padStart(2, '0');
+}
+
+certUpBtn.addEventListener('click', () => goToCert(certCurrent - 1));
+certDownBtn.addEventListener('click', () => goToCert(certCurrent + 1));
+certDots.forEach(d => d.addEventListener('click', () => goToCert(+d.dataset.index)));
+
+// Auto-play
+let certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
+certTrack.addEventListener('mouseenter', () => clearInterval(certAuto));
+certTrack.addEventListener('mouseleave', () => {
+  certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
+});
+
+// Touch swipe vertical
+let certTouchY = 0;
+certTrack.addEventListener('touchstart', e => { certTouchY = e.touches[0].clientY; });
+certTrack.addEventListener('touchend', e => {
+  const diff = certTouchY - e.changedTouches[0].clientY;
+  if (Math.abs(diff) > 40) goToCert(diff > 0 ? certCurrent + 1 : certCurrent - 1);
+});
+
+// Init first slide active
+goToCert(0);
 </script>
 </body>
 
