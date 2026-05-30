@@ -257,7 +257,7 @@
     }
     .avatar-name { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--text); letter-spacing: 0.02em; }
     .avatar-role { font-size: 0.78rem; color: var(--accent2); letter-spacing: 0.15em; text-transform: uppercase; }
-    .about-badge-wrap { position: absolute; bottom: -18px; right: -14px; z-index: 3; display: flex; flex-direction: column; gap: 10px; }
+    .about-badge-wrap { position: absolute; bottom: -18px; right: -129px; z-index: 3; display: flex; flex-direction: column; gap: 10px; }
     .about-badge {
       background: var(--surface2); backdrop-filter: blur(12px);
       border: 1px solid var(--border2); border-radius: 14px;
