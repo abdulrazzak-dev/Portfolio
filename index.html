@@ -155,7 +155,7 @@
       <div class="about-exp-tag">Junior Software Developer</div>
       <div class="about-badge-wrap">
         <div class="about-badge">⭐ Associate Full Stack Developer</div>
-        <div class="about-badge2">⭐ Front-End Specialist (HTML, CSS, JS, AI) </div>
+        <div class="about-badge2">⭐ Front-End Specialist  (HTML, CSS, JS, AI) </div>
       </div>
     </div>
   </div>
@@ -318,7 +318,7 @@
   </div>
 </section>
 
-<!-- ── PROJECTS (IMPROVED) ── -->
+<!-- ── PROJECTS (SLIDER) ── -->
 <section id="projects">
   <div class="projects-header reveal">
     <div class="section-label">Selected Work</div>
@@ -326,91 +326,109 @@
     <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">Real projects, live on the web — each one built with intention, craft, and clean code.</p>
   </div>
 
-  <div class="projects-grid">
+  <!-- Slider Wrapper -->
+  <div class="slider-wrapper reveal">
+    <div class="slider-track" id="sliderTrack">
 
-    <!-- Featured Project -->
-    <div class="project-card featured reveal">
-      <div class="card-glow"></div>
-      <div class="project-img-wrap featured-img">
-        <img class="project-img" src="image/project 1.png" alt="3D Design Portfolio"
-          onerror="this.style.background='linear-gradient(135deg,#1a1a3e,#0a2a40)';this.style.minHeight='340px';this.removeAttribute('src')">
-        <div class="project-img-overlay"></div>
-        <a href=" https://abdulrazzak-dev.github.io/Portfolio/" target="_blank" class="project-live-btn">
-          <span class="project-live-dot"></span> Live Site
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-tags">
-          <span class="project-tag">HTML5</span>
-          <span class="project-tag">CSS3</span>
-          <span class="project-tag">GSAP</span>
-          <span class="project-tag">Spline 3D</span>
-        </div>
-        <div class="project-name">3D Design Portfolio</div>
-        <div class="project-desc">A full personal portfolio site with an animated 3D hero built in Spline, smooth scroll transitions, custom cursor, preloader sequence, and a dark cyberpunk aesthetic — fully responsive and performance-optimised.</div>
-        <div class="project-footer">
-          <a href=" https://abdulrazzak-dev.github.io/Portfolio/" target="_blank" class="project-link">
-            View Live Project <i class="fa-solid fa-arrow-right"></i>
+      <!-- Card 1 -->
+      <div class="project-card">
+        <div class="card-glow"></div>
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/project 1.png" alt="3D Design Portfolio"
+            onerror="this.style.background='linear-gradient(135deg,#1a1a3e,#0a2a40)';this.style.minHeight='220px';this.removeAttribute('src')">
+          <div class="project-img-overlay"></div>
+          <a href="https://abdulrazzak-dev.github.io/Portfolio/" target="_blank" class="project-live-btn">
+            <span class="project-live-dot"></span> Live Site
           </a>
         </div>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card reveal">
-      <div class="card-glow"></div>
-      <div class="project-img-wrap">
-        <img class="project-img" src="image/Project 2.png" alt="Golden Electrical"
-          onerror="this.style.background='linear-gradient(135deg,#2a1a00,#0a0a2a)';this.style.minHeight='220px';this.removeAttribute('src')">
-        <div class="project-img-overlay"></div>
-        <a href=" https://abdulrazzak-dev.github.io/golden-electrical-storefront/" target="_blank" class="project-live-btn">
-          <span class="project-live-dot"></span> Live Site
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-tags">
-          <span class="project-tag">HTML</span>
-          <span class="project-tag">CSS</span>
-          <span class="project-tag">JavaScript</span>
-          <span class="project-tag">E-Commerce</span>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">HTML5</span>
+            <span class="project-tag">CSS3</span>
+            <span class="project-tag">GSAP</span>
+            <span class="project-tag">Spline 3D</span>
+          </div>
+          <div class="project-name">3D Design Portfolio</div>
+          <div class="project-desc">A full personal portfolio site with an animated 3D hero built in Spline, smooth scroll transitions, custom cursor, preloader sequence, and a dark cyberpunk aesthetic.</div>
+          <div class="project-footer">
+            <a href="https://abdulrazzak-dev.github.io/Portfolio/" target="_blank" class="project-link">
+              View Live Project <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="project-name">Golden Electrical</div>
-        <div class="project-desc">Product catalogue website for an electrical manufacturer — features animated hero, product listings, quote system, and a clean business-focused design.</div>
-        <div class="project-footer">
-          <a href=" https://abdulrazzak-dev.github.io/golden-electrical-storefront/" target="_blank" class="project-link">
-            View Live Project <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="project-card">
+        <div class="card-glow"></div>
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/Project 2.png" alt="Golden Electrical"
+            onerror="this.style.background='linear-gradient(135deg,#2a1a00,#0a0a2a)';this.style.minHeight='220px';this.removeAttribute('src')">
+          <div class="project-img-overlay"></div>
+          <a href="https://abdulrazzak-dev.github.io/golden-electrical-storefront/" target="_blank" class="project-live-btn">
+            <span class="project-live-dot"></span> Live Site
           </a>
         </div>
-      </div>
-    </div>
-    
-    <!-- Project 3 -->
-    <div class="project-card reveal">
-      <div class="card-glow"></div>
-      <div class="project-img-wrap">
-        <img class="project-img" src="image/project 3.png" alt="Sweet Delights Bakery"
-          onerror="this.style.background='linear-gradient(135deg,#2a0a1a,#0a0a2a)';this.style.minHeight='220px';this.removeAttribute('src')">
-        <div class="project-img-overlay"></div>
-        <a href=" https://abdulrazzak-dev.github.io/sweet-delights-bakery/" target="_blank" class="project-live-btn">
-          <span class="project-live-dot"></span> Live Site
-        </a>
-      </div>
-      <div class="project-info">
-        <div class="project-tags">
-          <span class="project-tag">HTML</span>
-          <span class="project-tag">CSS</span>
-          <span class="project-tag">WordPress</span>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">E-Commerce</span>
+          </div>
+          <div class="project-name">Golden Electrical</div>
+          <div class="project-desc">Product catalogue website for an electrical manufacturer — features animated hero, product listings, quote system, and a clean business-focused design.</div>
+          <div class="project-footer">
+            <a href="https://abdulrazzak-dev.github.io/golden-electrical-storefront/" target="_blank" class="project-link">
+              View Live Project <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-        <div class="project-name">Sweet Delights Bakery</div>
-        <div class="project-desc">Warm and inviting bakery website with elegant typography, product showcase gallery, and integrated contact form — a clean, conversion-focused design.</div>
-        <div class="project-footer">
-          <a href=" https://abdulrazzak-dev.github.io/sweet-delights-bakery/" target="_blank" class="project-link">
-            View Live Project <i class="fa-solid fa-arrow-right"></i>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="project-card">
+        <div class="card-glow"></div>
+        <div class="project-img-wrap">
+          <img class="project-img" src="image/project 3.png" alt="Sweet Delights Bakery"
+            onerror="this.style.background='linear-gradient(135deg,#2a0a1a,#0a0a2a)';this.style.minHeight='220px';this.removeAttribute('src')">
+          <div class="project-img-overlay"></div>
+          <a href="https://abdulrazzak-dev.github.io/sweet-delights-bakery/" target="_blank" class="project-live-btn">
+            <span class="project-live-dot"></span> Live Site
           </a>
         </div>
+        <div class="project-info">
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">WordPress</span>
+          </div>
+          <div class="project-name">Sweet Delights Bakery</div>
+          <div class="project-desc">Warm and inviting bakery website with elegant typography, product showcase gallery, and integrated contact form — a clean, conversion-focused design.</div>
+          <div class="project-footer">
+            <a href="https://abdulrazzak-dev.github.io/sweet-delights-bakery/" target="_blank" class="project-link">
+              View Live Project <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
 
+    </div><!-- end slider-track -->
+
+    <!-- Arrow Buttons -->
+    <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="slider-btn slider-next" id="sliderNext" aria-label="Next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Dots -->
+    <div class="slider-dots" id="sliderDots">
+      <span class="slider-dot active" data-index="0"></span>
+      <span class="slider-dot" data-index="1"></span>
+      <span class="slider-dot" data-index="2"></span>
+    </div>
   </div>
 </section>
 
@@ -682,6 +700,39 @@ function handleSubmit() {
   document.getElementById('f-email').value = '';
   document.getElementById('f-msg').value = '';
 }
+/* ── PROJECT SLIDER ── */
+const track = document.getElementById('sliderTrack');
+const dots = document.querySelectorAll('.slider-dot');
+const prevBtn = document.getElementById('sliderPrev');
+const nextBtn = document.getElementById('sliderNext');
+let current = 0;
+const total = dots.length;
+
+function goToSlide(n) {
+  current = (n + total) % total;
+  track.style.transform = `translateX(-${current * 100}%)`;
+  dots.forEach(d => d.classList.remove('active'));
+  dots[current].classList.add('active');
+  prevBtn.disabled = false;
+  nextBtn.disabled = false;
+}
+
+prevBtn.addEventListener('click', () => goToSlide(current - 1));
+nextBtn.addEventListener('click', () => goToSlide(current + 1));
+dots.forEach(d => d.addEventListener('click', () => goToSlide(+d.dataset.index)));
+
+// Auto-play every 4 seconds
+let autoPlay = setInterval(() => goToSlide(current + 1), 4000);
+track.addEventListener('mouseenter', () => clearInterval(autoPlay));
+track.addEventListener('mouseleave', () => { autoPlay = setInterval(() => goToSlide(current + 1), 4000); });
+
+// Touch/swipe support
+let touchStartX = 0;
+track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+track.addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 50) goToSlide(diff > 0 ? current + 1 : current - 1);
+});
 
 /* ── GSAP ── */
 gsap.registerPlugin(ScrollTrigger);
@@ -767,7 +818,6 @@ function startMain() {
 const roles = [
   'Junior Software Developer',
   'Associate Full Stack Developer',
-  'Full Stack Developer',
   'Front-End Specialist'
 ];
 let ri = 0, ci = 0, deleting = false;
