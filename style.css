@@ -185,7 +185,7 @@
       background: linear-gradient(135deg, var(--accent2) 0%, var(--accent) 50%, var(--accent3) 100%);
       -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
     }
-    .hero-subtitle { margin-top: 22px; font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 460px; opacity: 0; }
+    .hero-subtitle { margin-top: 22px; font-size: 0.85rem; color: var(--muted); line-height: 1.75; max-width: 460px; opacity: 0; }
     .hero-cta { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; opacity: 0; }
     .hero-stats { margin-top: 56px; display: flex; gap: 44px; opacity: 0; }
     .stat-num {
@@ -208,6 +208,19 @@
     .scroll-dot { width: 3px; height: 6px; background: var(--accent2); border-radius: 2px; animation: scrollDot 1.6s ease infinite; }
     @keyframes scrollDot { 0%,100% { transform: translateY(0); opacity: 1; } 80% { transform: translateY(9px); opacity: 0; } }
 
+    /* tools grid */
+    .tools-marquee { overflow: hidden; margin-top: 56px; }
+    .tools-track { display: flex; gap: 16px; width: max-content; animation: marquee 22s linear infinite; }
+    .tools-track:hover { animation-play-state: paused; }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .tool-chip {
+      display: flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 50px;
+      padding: 9px 18px; white-space: nowrap;
+      font-size: 0.78rem; color: var(--muted); transition: all .3s;
+    }
+    .tool-chip:hover { border-color: var(--accent2); color: var(--text); }
+    .tool-chip i { font-size: 0.9rem; color: var(--accent2); }
     /* ── ABOUT (IMPROVED) ── */
     #about {
       padding: 120px 5%;
@@ -339,19 +352,7 @@
       box-shadow: 0 0 8px rgba(0,229,255,0.4);
       width: 0%; transition: width 1.2s cubic-bezier(0.16,1,0.3,1);
     }
-    /* tools grid */
-    .tools-marquee { overflow: hidden; margin-top: 56px; }
-    .tools-track { display: flex; gap: 16px; width: max-content; animation: marquee 22s linear infinite; }
-    .tools-track:hover { animation-play-state: paused; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .tool-chip {
-      display: flex; align-items: center; gap: 8px;
-      background: var(--surface); border: 1px solid var(--border); border-radius: 50px;
-      padding: 9px 18px; white-space: nowrap;
-      font-size: 0.78rem; color: var(--muted); transition: all .3s;
-    }
-    .tool-chip:hover { border-color: var(--accent2); color: var(--text); }
-    .tool-chip i { font-size: 0.9rem; color: var(--accent2); }
+    
 
     /* ── PROJECTS (IMPROVED) ── */
     #projects {
