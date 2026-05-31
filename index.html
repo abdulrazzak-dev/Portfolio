@@ -1,25 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdul Razzak - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
-    <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abdul Razzak — Junior Software Developer </title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  emailjs.init("KcQTjGrUY6xN5ubnO");
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdul Razzak — Junior Software Developer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>emailjs.init("KcQTjGrUY6xN5ubnO");</script>
 </head>
 
 <body>
@@ -37,7 +32,7 @@
 <!-- Toast -->
 <div class="toast" id="toast">Message sent! ✦</div>
 
-<!-- Nav -->
+<!-- ── NAV ── -->
 <nav id="main-nav">
   <a href="#hero" class="nav-logo">AR.</a>
   <ul class="nav-links">
@@ -45,21 +40,38 @@
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#certificates">certificates</a></li>
-    <li><a href="#contact">Contact</a></li> 
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <!-- Dark / Light toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+        <div class="theme-toggle-thumb">
+          <span class="theme-toggle-icon" id="themeIcon">🌙</span>
+        </div>
+      </button>
+    </li>
   </ul>
-  <div class="hamburger" id="hamburger">
-    <span></span><span></span><span></span>
+  <!-- Mobile: hamburger + theme toggle -->
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="theme-toggle" id="themeToggleMobile" aria-label="Toggle theme" style="display:none;">
+      <div class="theme-toggle-thumb">
+        <span class="theme-toggle-icon" id="themeIconMobile">🌙</span>
+      </div>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
   </div>
 </nav>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
   <a href="#hero" onclick="closeMobileMenu()">Home</a>
   <a href="#about" onclick="closeMobileMenu()">About</a>
   <a href="#skills" onclick="closeMobileMenu()">Skills</a>
   <a href="#projects" onclick="closeMobileMenu()">Projects</a>
-  <a href="#certificates" onclick="closeMobileMenu()">certificates</a>
+  <a href="#certificates" onclick="closeMobileMenu()">Certificates</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
 
@@ -77,18 +89,20 @@
       <div class="available-dot"></div>
       Available for work
     </div>
-    <h1 class="hero-h1">Hi, I'm<br><span class="name-highlight">Abdul Razzak</span></h1><br>
+    <h1 class="hero-h1">Hi, I'm<br><span class="name-highlight">Abdul Razzak</span></h1>
     <div class="hero-role-wrap">
-  <span class="hero-role" id="heroRole">Junior Software Developer</span>
-  <span class="hero-role-cursor">|</span>
-</div>
-    <p class="hero-subtitle">Junior Software Developer & Front-End Specialist building responsive, user-focused web applications with modern technologies and clean, maintainable code.</p>
+      <span class="hero-role" id="heroRole">Junior Software Developer</span>
+      <span class="hero-role-cursor">|</span>
+    </div>
+    <p class="hero-subtitle">Junior Software Developer Front-End Specialist building responsive, user-focused web applications with modern technologies and clean, maintainable code.</p>
     <div class="hero-cta">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="#contact" class="btn-outline">Hire Me</a>
-    </div><br>
+      <a href="image/ABDUL RAZZAK - CV.pdf" download class="btn-outline">Download CV</a>
+    </div>
+  </div>
 
-  <!-- Hero Tools Marquee — OUTSIDE hero-content -->
+  <!-- Hero Tools Marquee -->
   <div class="hero-marquee-wrap">
     <div class="tools-track">
       <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
@@ -96,43 +110,42 @@
       <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
       <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
       <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
-      <div class="tool-chip"><i class="fa-brands fa-wordpress"></i> Bootstrap</div>
+      <div class="tool-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
       <div class="tool-chip"><i class="fa-solid fa-bolt"></i> GSAP</div>
       <div class="tool-chip"><i class="fa-solid fa-cube"></i> Spline 3D</div>
       <div class="tool-chip"><i class="fa-brands fa-figma"></i> Canva</div>
       <div class="tool-chip"><i class="fa-solid fa-shield-halved"></i> Web Security</div>
       <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
-      <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Chrome DevTools</div>
+      <div class="tool-chip"><i class="fa-solid fa-screwdriver-wrench"></i> Chrome DevTools</div>
       <!-- Duplicate for seamless loop -->
       <div class="tool-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
       <div class="tool-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
       <div class="tool-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
       <div class="tool-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
       <div class="tool-chip"><i class="fa-brands fa-github"></i> GitHub</div>
-      <div class="tool-chip"><i class="fa-brands fa-wordpress"></i> Bootstrap</div>
+      <div class="tool-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</div>
       <div class="tool-chip"><i class="fa-solid fa-bolt"></i> GSAP</div>
       <div class="tool-chip"><i class="fa-solid fa-cube"></i> Spline 3D</div>
       <div class="tool-chip"><i class="fa-brands fa-figma"></i> Canva</div>
       <div class="tool-chip"><i class="fa-solid fa-shield-halved"></i> Web Security</div>
       <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive</div>
-      <div class="tool-chip"><i class="fa-solid fa-mobile-screen"></i> Chrome DevTools</div>
+      <div class="tool-chip"><i class="fa-solid fa-screwdriver-wrench"></i> Chrome DevTools</div>
     </div>
   </div>
-
-  <div class="scroll-indicator" id="scroll-indicator">
-    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+<br>
+  <div class="scroll-indicator" id="scroll-indicator"><br>
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div> <br>
     <span>Scroll</span>
   </div>
 </section>
 
-<!-- ── ABOUT (IMPROVED) ── -->
+<!-- ── ABOUT ── -->
 <section id="about">
   <div class="about-visual reveal">
     <div class="about-photo-frame">
       <div class="about-photo-bg"></div>
       <div class="about-photo-border">
         <div class="about-photo-inner">
-          <!-- Real photo: replace src with your actual photo path e.g. "image/Profile 1.png" -->
           <img src="image/my image.png" alt="Abdul Razzak"
             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
           <div class="about-avatar-placeholder" style="display:none">
@@ -145,7 +158,7 @@
       <div class="about-exp-tag">Junior Software Developer</div>
       <div class="about-badge-wrap">
         <div class="about-badge">⭐ Associate Full Stack Developer</div>
-        <div class="about-badge2">⭐ Front-End Specialist  (HTML, CSS, JS, AI) </div>
+        <div class="about-badge2">⭐ Front-End Specialist (HTML, CSS, JS, AI)</div>
       </div>
     </div>
   </div>
@@ -187,27 +200,27 @@
   </div>
 </section>
 
-<!-- ── SKILLS SECTION (NEW) ── -->
+<!-- ── SKILLS ── -->
 <section id="skills">
   <div class="skills-container">
     <div class="skills-header reveal">
       <div class="section-label">What I Do</div>
-      <h2 class="section-title" style="font-size: clamp(2rem,5vw,3.5rem)">My <span>Skills</span> & Expertise</h2>
+      <h2 class="section-title" style="font-size: clamp(2rem,5vw,3.5rem)">My <span>Skills</span> &amp; Expertise</h2>
       <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">A focused toolkit of modern web technologies, continuously growing with every project.</p>
     </div>
-    <div class="skill-pills" style="margin-bottom:22px">
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">GitHub</span>
-          <span class="skill-pill">VS Code</span>
-          <span class="skill-pill">Chrome DevTools</span>
-          <span class="skill-pill">Canva</span>
-          <span class="skill-pill">Spline 3D</span>
-          <span class="skill-pill">GitHub Pages</span>
-        </div>
+
+    <div class="skill-pills">
+      <span class="skill-pill">Git</span>
+      <span class="skill-pill">GitHub</span>
+      <span class="skill-pill">VS Code</span>
+      <span class="skill-pill">Chrome DevTools</span>
+      <span class="skill-pill">Canva</span>
+      <span class="skill-pill">Spline 3D</span>
+      <span class="skill-pill">GitHub Pages</span>
+    </div>
 
     <div class="skills-categories">
-
-      <!-- Category 1: Core Technologies -->
+      <!-- Core Technologies -->
       <div class="skill-category reveal">
         <div class="cat-icon"><i class="fa-solid fa-laptop-code"></i></div>
         <div class="cat-title">Core Technologies</div>
@@ -222,7 +235,7 @@
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
           </div>
           <div class="skill-bar-item">
-            <div class="skill-bar-top"><span class="skill-bar-name">JavaScript </span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">80%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
           <div class="skill-bar-item">
@@ -232,7 +245,7 @@
         </div>
       </div>
 
-      <!-- Category 2: Design & Animation -->
+      <!-- Design & Animation -->
       <div class="skill-category reveal">
         <div class="cat-icon"><i class="fa-solid fa-paintbrush"></i></div>
         <div class="cat-title">Design & Animation</div>
@@ -255,22 +268,17 @@
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
           </div>
           <div class="skill-bar-item">
-            <div class="skill-bar-top"><span class="skill-bar-name">Bootstrap (Framework)</span><span class="skill-bar-pct">80%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name">Bootstrap</span><span class="skill-bar-pct">80%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
           </div>
         </div>
       </div>
-      <!-- Category 3: Useing Ai Tools -->
-     
-          
 
-      <!-- Category 4: Tools & Workflow -->
-    <div>
+      <!-- Tools & Workflow -->
       <div class="skill-category reveal">
         <div class="cat-icon"><i class="fa-solid fa-toolbox"></i></div>
         <div class="cat-title">Tools & Workflow</div>
         <div class="cat-desc">Professional development environment and version control.</div>
-        
         <div class="skill-bars">
           <div class="skill-bar-item">
             <div class="skill-bar-top"><span class="skill-bar-name">Git / GitHub</span><span class="skill-bar-pct">82%</span></div>
@@ -282,15 +290,15 @@
           </div>
         </div>
       </div>
-    </div>
 
-     <div class="skill-category reveal">
-        <div class="cat-icon"><i class="fa-solid fa-paintbrush"></i></div>
-        <div class="cat-title">Useing Ai Tools</div>
-        <div class="cat-desc">Using AI tools to automate workflows, enhance creativity, improve productivity, and build smarter digital solutions.</div>
+      <!-- AI Tools -->
+      <div class="skill-category reveal">
+        <div class="cat-icon"><i class="fa-solid fa-robot"></i></div>
+        <div class="cat-title">Using AI Tools</div>
+        <div class="cat-desc">Using AI tools to automate workflows, enhance creativity, and build smarter digital solutions.</div>
         <div class="skill-bars">
           <div class="skill-bar-item">
-            <div class="skill-bar-top"><span class="skill-bar-name">GeminiAI</span><span class="skill-bar-pct">78%</span></div>
+            <div class="skill-bar-top"><span class="skill-bar-name">Gemini AI</span><span class="skill-bar-pct">78%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div>
           </div>
           <div class="skill-bar-item">
@@ -305,7 +313,9 @@
             <div class="skill-bar-top"><span class="skill-bar-name">Lovable</span><span class="skill-bar-pct">70%</span></div>
             <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
           </div>
-
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -317,7 +327,6 @@
     <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">Real projects, live on the web — each one built with intention, craft, and clean code.</p>
   </div>
 
-  <!-- Slider Wrapper -->
   <div class="slider-wrapper reveal">
     <div class="slider-track" id="sliderTrack">
 
@@ -406,15 +415,12 @@
 
     </div><!-- end slider-track -->
 
-    <!-- Arrow Buttons -->
     <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
     <button class="slider-btn slider-next" id="sliderNext" aria-label="Next">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
-
-    <!-- Dots -->
     <div class="slider-dots" id="sliderDots">
       <span class="slider-dot active" data-index="0"></span>
       <span class="slider-dot" data-index="1"></span>
@@ -423,201 +429,231 @@
   </div>
 </section>
 
-<!-- ── CERTIFICATES ── -->
+<!-- ══════════════════════════════════════
+     CERTIFICATES — HORIZONTAL SLIDE FORMAT
+══════════════════════════════════════ -->
 <section id="certificates">
   <div class="cert-header reveal">
     <div class="section-label">Achievements</div>
-    <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">Certificates & <span>Credentials</span></h2>
+    <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">Certificates &amp; <span>Credentials</span></h2>
     <p style="color:var(--muted);margin-top:14px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;font-size:0.95rem">Verified skills and completed courses across development, design, and AI.</p>
   </div>
 
-  <div class="cert-slider-layout reveal">
+  <div class="cert-slider-outer reveal">
+    <div class="cert-slider-viewport">
+      <div class="cert-slider-track" id="certSliderTrack">
 
-    <!-- Left: Vertical Slider -->
-    <div class="cert-slider-wrap">
-      <div class="cert-slider-track" id="certTrack">
-
-        <div class="cert-slide" data-index="0">
-          <div class="cert-slide-img">
+        <!-- Cert 1 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/Front - End Development mora.png" alt="Front-End Development" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">01</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">University of Moratuwa</div>
+            <div class="cert-title">Front-End Web Development</div>
+            <div class="cert-desc">Comprehensive front-end development course covering HTML5, CSS3, JavaScript, and responsive design principles.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/Front - End Development mora.png" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="1">
-          <div class="cert-slide-img">
+        <!-- Cert 2 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/web devlopment.png" alt="Web Development" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">02</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">University of Moratuwa</div>
+            <div class="cert-title">Web Development</div>
+            <div class="cert-desc">Full web development programme covering both front-end and back-end fundamentals with real-world projects.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> Sep 2025</span>
+              <a href="image/web devlopment.png" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="2">
-          <div class="cert-slide-img">
+        <!-- Cert 3 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/simplilern 2026-05-30 at 16.01.03.jpeg" alt="Intro to HTML" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">03</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">Simplilearn</div>
+            <div class="cert-title">Introduction to HTML</div>
+            <div class="cert-desc">Foundational HTML course covering document structure, semantic elements, forms, and accessibility best practices.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/simplilern 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="3">
-          <div class="cert-slide-img">
+        <!-- Cert 4 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" alt="Front End Dev" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">04</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">Simplilearn</div>
+            <div class="cert-title">Introduction to Front End Development</div>
+            <div class="cert-desc">Core front-end skills including HTML, CSS, JavaScript and browser developer tools for modern web interfaces.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="4">
-          <div class="cert-slide-img">
+        <!-- Cert 5 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/Hp.jpeg" alt="AI for Beginners" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">05</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">HP</div>
+            <div class="cert-title">AI for Beginners</div>
+            <div class="cert-desc">Introduction to artificial intelligence concepts, machine learning basics, and practical AI applications in everyday tools.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/Hp.jpeg" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="5">
-          <div class="cert-slide-img">
+        <!-- Cert 6 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/hp data analitic.png" alt="Data Analytics" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">06</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">HP</div>
+            <div class="cert-title">Data Analytics</div>
+            <div class="cert-desc">Data analysis fundamentals including data interpretation, visualisation techniques, and deriving actionable insights.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/hp data analitic.png" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="6">
-          <div class="cert-slide-img">
+        <!-- Cert 7 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/hp leadership.png" alt="Effective Leadership" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">07</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">HP</div>
+            <div class="cert-title">Effective Leadership</div>
+            <div class="cert-desc">Leadership skills covering team management, communication strategies, decision-making, and professional growth.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/hp leadership.png" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="7">
-          <div class="cert-slide-img">
+        <!-- Cert 8 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/claude 101.jpeg" alt="Claude 101" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">08</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">Anthropic</div>
+            <div class="cert-title">Claude 101</div>
+            <div class="cert-desc">Practical usage of Claude AI for productivity, creative work, coding assistance, and responsible AI interaction.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/claude 101.jpeg" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="cert-slide" data-index="8">
-          <div class="cert-slide-img">
+        <!-- Cert 9 -->
+        <div class="cert-card">
+          <div class="cert-img-side">
             <img src="image/clauod.jpeg" alt="Claude Code 101" onerror="this.style.display='none'">
+            <div class="cert-img-overlay"></div>
+          </div>
+          <div class="cert-text-side">
+            <div class="cert-counter-row">
+              <span class="c-cur">09</span>
+              <span style="color:var(--muted);font-size:0.85rem">/ 09</span>
+            </div>
+            <div class="cert-tag">Anthropic</div>
+            <div class="cert-title">Claude Code 101</div>
+            <div class="cert-desc">Using Claude for software development workflows — code generation, debugging, refactoring, and AI-assisted engineering.</div>
+            <div class="cert-meta">
+              <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
+              <a href="image/clauod.jpeg" target="_blank" class="cert-view-link">View <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
           </div>
         </div>
 
-      </div>
+      </div><!-- end cert-slider-track -->
+    </div><!-- end cert-slider-viewport -->
 
-      <!-- Up / Down arrows -->
-      <button class="cert-arrow cert-arrow-up" id="certUp" aria-label="Previous">
-        <i class="fa-solid fa-chevron-up"></i>
+    <!-- Nav row -->
+    <div class="cert-nav">
+      <button class="cert-btn" id="certPrev" aria-label="Previous certificate">
+        <i class="fa-solid fa-chevron-left"></i>
       </button>
-      <button class="cert-arrow cert-arrow-down" id="certDown" aria-label="Next">
-        <i class="fa-solid fa-chevron-down"></i>
+      <div class="cert-dots-row" id="certDotsRow">
+        <span class="cert-dot-h active" data-index="0"></span>
+        <span class="cert-dot-h" data-index="1"></span>
+        <span class="cert-dot-h" data-index="2"></span>
+        <span class="cert-dot-h" data-index="3"></span>
+        <span class="cert-dot-h" data-index="4"></span>
+        <span class="cert-dot-h" data-index="5"></span>
+        <span class="cert-dot-h" data-index="6"></span>
+        <span class="cert-dot-h" data-index="7"></span>
+        <span class="cert-dot-h" data-index="8"></span>
+      </div>
+      <button class="cert-btn" id="certNext" aria-label="Next certificate">
+        <i class="fa-solid fa-chevron-right"></i>
       </button>
-    </div>
-
-    <!-- Right: Info Panel -->
-    <div class="cert-info-panel">
-
-      <div class="cert-counter">
-        <span id="certCurrent">01</span>
-        <span class="cert-counter-sep"></span>
-        <span class="cert-counter-total">09</span>
-      </div>
-
-      <div class="cert-info-content" id="certInfoContent">
-
-        <div class="cert-info-item active" data-index="0">
-          <div class="cert-tag">University of Moratuwa</div>
-          <div class="cert-title">Front-End Web Development</div>
-          <div class="cert-desc">Comprehensive front-end development course covering HTML5, CSS3, JavaScript, and responsive design principles.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/Front - End Development mora.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="1">
-          <div class="cert-tag">University of Moratuwa</div>
-          <div class="cert-title">Web Development</div>
-          <div class="cert-desc">Full web development programme covering both front-end and back-end fundamentals with real-world projects.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> Sep 2025</span>
-            <a href="image/web devlopment.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="2">
-          <div class="cert-tag">Simplilearn</div>
-          <div class="cert-title">Introduction to HTML</div>
-          <div class="cert-desc">Foundational HTML course covering document structure, semantic elements, forms, and accessibility best practices.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> 17th May 2026</span>
-            <a href="image/simplilern 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="3">
-          <div class="cert-tag">Simplilearn</div>
-          <div class="cert-title">Introduction to Front End Development</div>
-          <div class="cert-desc">Core front-end skills including HTML, CSS, JavaScript and browser developer tools for modern web interfaces.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> 16th May 2026</span>
-            <a href="image/WhatsApp Image 2026-05-30 at 16.01.03.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="4">
-          <div class="cert-tag">HP</div>
-          <div class="cert-title">AI for Beginners</div>
-          <div class="cert-desc">Introduction to artificial intelligence concepts, machine learning basics, and practical AI applications in everyday tools.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/Hp.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="5">
-          <div class="cert-tag">HP</div>
-          <div class="cert-title">Data Analytics</div>
-          <div class="cert-desc">Data analysis fundamentals including data interpretation, visualisation techniques, and deriving actionable insights.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/hp data analitic.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="6">
-          <div class="cert-tag">HP</div>
-          <div class="cert-title">Effective Leadership</div>
-          <div class="cert-desc">Leadership skills covering team management, communication strategies, decision-making, and professional growth.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/hp leadership.png" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="7">
-          <div class="cert-tag">Anthropic</div>
-          <div class="cert-title">Claude 101</div>
-          <div class="cert-desc">Practical usage of Claude AI for productivity, creative work, coding assistance, and responsible AI interaction.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/claude 101.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-        <div class="cert-info-item" data-index="8">
-          <div class="cert-tag">Anthropic</div>
-          <div class="cert-title">Claude Code 101</div>
-          <div class="cert-desc">Using Claude for software development workflows — code generation, debugging, refactoring, and AI-assisted engineering.</div>
-          <div class="cert-meta">
-            <span class="cert-date-pill"><i class="fa-regular fa-calendar"></i> May 2026</span>
-            <a href="image/clauod.jpeg" target="_blank" class="cert-view-link">View Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Progress dots -->
-      <div class="cert-dots" id="certDots">
-        <span class="cert-dot active" data-index="0"></span>
-        <span class="cert-dot" data-index="1"></span>
-        <span class="cert-dot" data-index="2"></span>
-        <span class="cert-dot" data-index="3"></span>
-        <span class="cert-dot" data-index="4"></span>
-        <span class="cert-dot" data-index="5"></span>
-        <span class="cert-dot" data-index="6"></span>
-        <span class="cert-dot" data-index="7"></span>
-        <span class="cert-dot" data-index="8"></span>
-      </div>
-
     </div>
   </div>
 </section>
@@ -654,7 +690,6 @@
   </div>
 </section>
 
-
 <!-- ── CONTACT ── -->
 <section id="contact">
   <div class="contact-header reveal">
@@ -662,26 +697,65 @@
     <h2 class="section-title" style="font-size:clamp(2rem,5vw,3.5rem)">Let's build something<br><span>remarkable together</span></h2>
     <p style="color:var(--muted);margin-top:14px;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.75;font-size:0.95rem">Have a project in mind? Drop me a message and let's make it happen.</p>
   </div>
-  <div class="contact-grid reveal">
-    <div class="form-group">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-input" placeholder="Your full name" id="f-name">
+
+  <div class="contact-body reveal">
+    <!-- Personal contact info cards -->
+    <div class="contact-info">
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+        <div>
+          <div class="ci-label">Phone</div>
+          <div class="ci-value"><a href="tel:+94775650625">+94 77 565 0625</a></div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+        <div>
+          <div class="ci-label">Email</div>
+          <div class="ci-value"><a href="mailto:hameedabdulrazzak@gmail.com">hameedabdulrazzak@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <div>
+          <div class="ci-label">Location</div>
+          <div class="ci-value">636/H, Malwatha, Malwana, Sri Lanka</div>
+        </div>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+        <div>
+          <div class="ci-label">LinkedIn</div>
+          <div class="ci-value"><a href="https://www.linkedin.com/in/aha-razzak" target="_blank">linkedin.com/in/aha-razzak</a></div>
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label class="form-label">Email</label>
-      <input type="email" class="form-input" placeholder="your@email.com" id="f-email">
-    </div>
-    <div class="form-group contact-full">
-      <label class="form-label">Message</label> 
-      <textarea class="form-textarea" placeholder="Tell me about your project..." id="f-msg"></textarea>
+
+    <!-- Contact form -->
+    <div class="contact-form">
+      <div class="contact-grid">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-input" placeholder="Your full name" id="f-name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com" id="f-email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell me about your project..." id="f-msg"></textarea>
+      </div>
+      <button class="form-submit" onclick="handleFormSubmit()">Send Message ✦</button>
     </div>
   </div>
-  <button class="form-submit" onclick="handleFormSubmit()">Send Message ✦</button>
+
   <div class="social-row reveal">
     <a href="https://github.com/abdulrazzak-dev" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
     <a href="https://www.linkedin.com/in/aha-razzak" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="https://x.com/AbdulRazzak3gol"target="_blank" class="social-btn" title="X"><i class="fa-brands fa-x"></i></a>
-    <a href="mailto:hameedabdulrazzak" class="social-btn" title="Email"><i class="fa-regular fa-envelope"></i></a>
+    <a href="https://x.com/AbdulRazzak3gol" target="_blank" class="social-btn" title="X"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="mailto:hameedabdulrazzak@gmail.com" class="social-btn" title="Email"><i class="fa-regular fa-envelope"></i></a>
   </div>
 </section>
 
@@ -702,7 +776,40 @@
   </div>
 </footer>
 
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
 <script>
+/* ── THEME TOGGLE ── */
+function initTheme() {
+  const saved = localStorage.getItem('ar-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateThemeIcons(saved);
+}
+function updateThemeIcons(theme) {
+  const icon = theme === 'dark' ? '🌙' : '☀️';
+  document.getElementById('themeIcon').textContent = icon;
+  document.getElementById('themeIconMobile').textContent = icon;
+}
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('ar-theme', next);
+  updateThemeIcons(next);
+}
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+document.getElementById('themeToggleMobile').addEventListener('click', toggleTheme);
+initTheme();
+
+/* Show mobile theme toggle only on mobile */
+function checkMobileToggle() {
+  const mobileToggle = document.getElementById('themeToggleMobile');
+  mobileToggle.style.display = window.innerWidth <= 768 ? 'flex' : 'none';
+}
+checkMobileToggle();
+window.addEventListener('resize', checkMobileToggle);
+
 /* ── CURSOR ── */
 const cursor = document.getElementById('cursor');
 const trail = document.getElementById('cursor-trail');
@@ -712,7 +819,7 @@ document.addEventListener('mousemove', e => {
   cursor.style.left = mx + 'px'; cursor.style.top = my + 'px';
   setTimeout(() => { trail.style.left = mx + 'px'; trail.style.top = my + 'px'; }, 80);
 });
-document.querySelectorAll('a, button, .project-card, .skill-category, .cert-card, .about-highlight').forEach(el => {
+document.querySelectorAll('a, button, .project-card, .skill-category, .about-highlight').forEach(el => {
   el.addEventListener('mouseenter', () => { cursor.style.width = '18px'; cursor.style.height = '18px'; cursor.style.background = 'var(--accent3)'; });
   el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; cursor.style.background = 'var(--accent2)'; });
 });
@@ -721,6 +828,7 @@ document.querySelectorAll('a, button, .project-card, .skill-category, .cert-card
 document.getElementById('hamburger').addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('open');
 });
+document.getElementById('mobileMenuClose').addEventListener('click', closeMobileMenu);
 function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
 
 /* ── FOOTER PARTICLES ── */
@@ -732,8 +840,6 @@ for (let i = 0; i < 18; i++) {
   p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;`;
   fpContainer.appendChild(p);
 }
-
-
 
 /* ── PROJECT SLIDER ── */
 const track = document.getElementById('sliderTrack');
@@ -748,25 +854,49 @@ function goToSlide(n) {
   track.style.transform = `translateX(-${current * 100}%)`;
   dots.forEach(d => d.classList.remove('active'));
   dots[current].classList.add('active');
-  prevBtn.disabled = false;
-  nextBtn.disabled = false;
 }
-
 prevBtn.addEventListener('click', () => goToSlide(current - 1));
 nextBtn.addEventListener('click', () => goToSlide(current + 1));
 dots.forEach(d => d.addEventListener('click', () => goToSlide(+d.dataset.index)));
 
-// Auto-play every 4 seconds
 let autoPlay = setInterval(() => goToSlide(current + 1), 4000);
 track.addEventListener('mouseenter', () => clearInterval(autoPlay));
 track.addEventListener('mouseleave', () => { autoPlay = setInterval(() => goToSlide(current + 1), 4000); });
 
-// Touch/swipe support
 let touchStartX = 0;
 track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
 track.addEventListener('touchend', e => {
   const diff = touchStartX - e.changedTouches[0].clientX;
   if (Math.abs(diff) > 50) goToSlide(diff > 0 ? current + 1 : current - 1);
+});
+
+/* ── CERTIFICATE HORIZONTAL SLIDER ── */
+const certTrack = document.getElementById('certSliderTrack');
+const certHDots = document.querySelectorAll('.cert-dot-h');
+const certPrevBtn = document.getElementById('certPrev');
+const certNextBtn = document.getElementById('certNext');
+let certIdx = 0;
+const certTotal = certHDots.length;
+
+function goToCert(n) {
+  certIdx = (n + certTotal) % certTotal;
+  certTrack.style.transform = `translateX(-${certIdx * 100}%)`;
+  certHDots.forEach(d => d.classList.remove('active'));
+  certHDots[certIdx].classList.add('active');
+}
+certPrevBtn.addEventListener('click', () => goToCert(certIdx - 1));
+certNextBtn.addEventListener('click', () => goToCert(certIdx + 1));
+certHDots.forEach(d => d.addEventListener('click', () => goToCert(+d.dataset.index)));
+
+let certAuto = setInterval(() => goToCert(certIdx + 1), 3800);
+certTrack.addEventListener('mouseenter', () => clearInterval(certAuto));
+certTrack.addEventListener('mouseleave', () => { certAuto = setInterval(() => goToCert(certIdx + 1), 3800); });
+
+let certTouchX = 0;
+certTrack.addEventListener('touchstart', e => { certTouchX = e.touches[0].clientX; });
+certTrack.addEventListener('touchend', e => {
+  const diff = certTouchX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40) goToCert(diff > 0 ? certIdx + 1 : certIdx - 1);
 });
 
 /* ── GSAP ── */
@@ -802,7 +932,6 @@ function startMain() {
   gsap.to('#scroll-indicator', { opacity: 1, duration: 0.6, delay: 1.4 });
   gsap.to('.glow-orb', { y: -28, duration: 4, repeat: -1, yoyo: true, ease: 'power1.inOut', stagger: 1.1 });
   gsap.to('.fp', { y: -14, duration: 2.5, repeat: -1, yoyo: true, ease: 'power1.inOut', stagger: { each: 0.2, from: 'random' } });
-  gsap.to('.form-submit', { boxShadow: '0 0 56px rgba(0,229,255,0.45)', duration: 1.5, repeat: -1, yoyo: true, ease: 'power1.inOut' });
 
   gsap.utils.toArray('.reveal').forEach(el => {
     gsap.fromTo(el,
@@ -811,12 +940,6 @@ function startMain() {
         scrollTrigger: { trigger: el, start: 'top 87%', once: true } }
     );
   });
-
-  gsap.fromTo('.project-card',
-    { opacity: 0, y: 56, scale: 0.97 },
-    { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.1, ease: 'power2.out',
-      scrollTrigger: { trigger: '.projects-grid', start: 'top 82%', once: true } }
-  );
 
   gsap.fromTo('.about-visual',
     { opacity: 0, x: -56 },
@@ -830,7 +953,6 @@ function startMain() {
       scrollTrigger: { trigger: '.skills-categories', start: 'top 82%', once: true } }
   );
 
-  // Skill bars animate on scroll
   ScrollTrigger.create({
     trigger: '.skills-categories',
     start: 'top 75%',
@@ -843,73 +965,33 @@ function startMain() {
   });
 
   gsap.to('.social-btn', { boxShadow: '0 0 18px rgba(0,229,255,0.2)', duration: 1.8, repeat: -1, yoyo: true, stagger: 0.3 });
+  gsap.to('.form-submit', { boxShadow: '0 0 56px rgba(0,229,255,0.45)', duration: 1.5, repeat: -1, yoyo: true, ease: 'power1.inOut' });
 
   gsap.fromTo('footer .footer-inner',
     { opacity: 0, y: 36, filter: 'blur(6px)' },
     { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.8,
       scrollTrigger: { trigger: 'footer', start: 'top 92%', once: true } }
   );
-  // Cycling role titles
-const roles = [
-  'Junior Software Developer',
-  'Associate Full Stack Developer',
-  'Front-End Specialist'
-];
-let ri = 0, ci = 0, deleting = false;
-const roleEl = document.getElementById('heroRole');
-function typeRole() {
-  const current = roles[ri];
-  if (!deleting) {
-    roleEl.textContent = current.slice(0, ++ci);
-    if (ci === current.length) { deleting = true; setTimeout(typeRole, 1800); return; }
-  } else {
-    roleEl.textContent = current.slice(0, --ci);
-    if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+
+  /* Typing role animation */
+  const roles = ['Junior Software Developer', 'Associate Full Stack Developer', 'Front-End Specialist'];
+  let ri = 0, ci = 0, deleting = false;
+  const roleEl = document.getElementById('heroRole');
+  function typeRole() {
+    const cur = roles[ri];
+    if (!deleting) {
+      roleEl.textContent = cur.slice(0, ++ci);
+      if (ci === cur.length) { deleting = true; setTimeout(typeRole, 1800); return; }
+    } else {
+      roleEl.textContent = cur.slice(0, --ci);
+      if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+    }
+    setTimeout(typeRole, deleting ? 45 : 90);
   }
-  setTimeout(typeRole, deleting ? 45 : 90);
-}
-typeRole();
-}
-/* ── CERTIFICATE VERTICAL SLIDER ── */
-const certTrack = document.getElementById('certTrack');
-const certSlides = document.querySelectorAll('.cert-slide');
-const certInfoItems = document.querySelectorAll('.cert-info-item');
-const certDots = document.querySelectorAll('.cert-dot');
-const certUpBtn = document.getElementById('certUp');
-const certDownBtn = document.getElementById('certDown');
-const certCurrentEl = document.getElementById('certCurrent');
-let certCurrent = 0;
-const certTotal = certSlides.length;
-const SLIDE_H = 420; // must match your CSS height
-
-function goToCert(n) {
-  certCurrent = (n + certTotal) % certTotal;
-  certTrack.style.transform = `translateY(-${certCurrent * SLIDE_H}px)`;
-  certSlides.forEach((s, i) => s.classList.toggle('active', i === certCurrent));
-  certInfoItems.forEach((item, i) => item.classList.toggle('active', i === certCurrent));
-  certDots.forEach((d, i) => d.classList.toggle('active', i === certCurrent));
-  certCurrentEl.textContent = String(certCurrent + 1).padStart(2, '0');
+  typeRole();
 }
 
-certUpBtn.addEventListener('click', () => goToCert(certCurrent - 1));
-certDownBtn.addEventListener('click', () => goToCert(certCurrent + 1));
-certDots.forEach(d => d.addEventListener('click', () => goToCert(+d.dataset.index)));
-
-let certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
-certTrack.addEventListener('mouseenter', () => clearInterval(certAuto));
-certTrack.addEventListener('mouseleave', () => {
-  certAuto = setInterval(() => goToCert(certCurrent + 1), 3500);
-});
-
-let certTouchY = 0;
-certTrack.addEventListener('touchstart', e => { certTouchY = e.touches[0].clientY; });
-certTrack.addEventListener('touchend', e => {
-  const diff = certTouchY - e.changedTouches[0].clientY;
-  if (Math.abs(diff) > 40) goToCert(diff > 0 ? certCurrent + 1 : certCurrent - 1);
-});
-
-goToCert(0);
-
+/* ── CONTACT FORM ── */
 function handleFormSubmit() {
   const name = document.getElementById('f-name').value.trim();
   const email = document.getElementById('f-email').value.trim();
@@ -917,68 +999,42 @@ function handleFormSubmit() {
   const toast = document.getElementById('toast');
   const btn = document.querySelector('.form-submit');
 
-  // Validation
   if (!name || !email || !msg) {
     toast.textContent = 'Please fill all fields ✗';
     toast.style.borderColor = '#ff6b6b';
     toast.style.color = '#ff6b6b';
     toast.classList.add('show');
-    setTimeout(() => {
-      toast.classList.remove('show');
-      toast.style.borderColor = '';
-      toast.style.color = '';
-    }, 3000);
+    setTimeout(() => { toast.classList.remove('show'); toast.style.borderColor = ''; toast.style.color = ''; }, 3000);
     return;
   }
 
-  // Disable button while sending
   btn.textContent = 'Sending... ⏳';
   btn.disabled = true;
 
-  const templateParams = {
-    name: name,
-    email: email,
-    message: msg,
-    time: new Date().toLocaleString()
-  };
+  const templateParams = { name, email, message: msg, time: new Date().toLocaleString() };
 
   emailjs.send('service_vg73zir', 'template_8qz8xks', templateParams)
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-
+    .then(() => {
       toast.textContent = 'Message sent successfully! ✦';
-      toast.style.borderColor = '';
-      toast.style.color = '';
+      toast.style.borderColor = ''; toast.style.color = '';
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 3500);
-
       gsap.to('.form-submit', { scale: 1.07, duration: 0.15, yoyo: true, repeat: 1 });
-
       document.getElementById('f-name').value = '';
       document.getElementById('f-email').value = '';
       document.getElementById('f-msg').value = '';
-
       btn.textContent = 'Send Message ✦';
       btn.disabled = false;
     })
-    .catch(function(error) {
-      console.error('FAILED...', error);
-
+    .catch(() => {
       toast.textContent = 'Failed to send. Try again ✗';
-      toast.style.borderColor = '#ff6b6b';
-      toast.style.color = '#ff6b6b';
+      toast.style.borderColor = '#ff6b6b'; toast.style.color = '#ff6b6b';
       toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-        toast.style.borderColor = '';
-        toast.style.color = '';
-      }, 3500);
-
+      setTimeout(() => { toast.classList.remove('show'); toast.style.borderColor = ''; toast.style.color = ''; }, 3500);
       btn.textContent = 'Send Message ✦';
       btn.disabled = false;
     });
 }
 </script>
 </body>
-
 </html>
