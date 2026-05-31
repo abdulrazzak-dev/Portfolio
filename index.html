@@ -15,6 +15,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js"></script>
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("KcQTjGrUY6xN5ubnO");
+</script>
 </head>
 
 <body>
@@ -668,7 +673,7 @@
       <textarea class="form-textarea" placeholder="Tell me about your project..." id="f-msg"></textarea>
     </div>
   </div>
-  <button class="form-submit" onclick="handleSubmit()">Send Message ✦</button>
+  <button class="form-submit" onclick="handleFormSubmit()">Send Message ✦</button>
   <div class="social-row reveal">
     <a href="https://github.com/abdulrazzak-dev" target="_blank" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
     <a href="https://www.linkedin.com/in/aha-razzak" target="_blank" class="social-btn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -724,28 +729,8 @@ for (let i = 0; i < 18; i++) {
   fpContainer.appendChild(p);
 }
 
-/* ── TOAST ── */
-function handleSubmit() {
-  const name = document.getElementById('f-name').value;
-  const email = document.getElementById('f-email').value;
-  const msg = document.getElementById('f-msg').value;
-  const toast = document.getElementById('toast');
-  if (!name || !email || !msg) {
-    toast.textContent = 'Please fill all fields ✗';
-    toast.style.borderColor = '#ff6b6b'; toast.style.color = '#ff6b6b';
-    toast.classList.add('show');
-    setTimeout(() => { toast.classList.remove('show'); toast.style.borderColor = ''; toast.style.color = ''; }, 3000);
-    return;
-  }
-  gsap.to('.form-submit', { scale: 1.07, duration: 0.15, yoyo: true, repeat: 1 });
-  toast.textContent = 'Message sent successfully! ✦';
-  toast.style.borderColor = ''; toast.style.color = '';
-  toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 3500);
-  document.getElementById('f-name').value = '';
-  document.getElementById('f-email').value = '';
-  document.getElementById('f-msg').value = '';
-}
+
+
 /* ── PROJECT SLIDER ── */
 const track = document.getElementById('sliderTrack');
 const dots = document.querySelectorAll('.slider-dot');
@@ -920,6 +905,75 @@ certTrack.addEventListener('touchend', e => {
 });
 
 goToCert(0);
+
+function handleFormSubmit() {
+  const name = document.getElementById('f-name').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+  const msg = document.getElementById('f-msg').value.trim();
+  const toast = document.getElementById('toast');
+  const btn = document.querySelector('.form-submit');
+
+  // Validation
+  if (!name || !email || !msg) {
+    toast.textContent = 'Please fill all fields ✗';
+    toast.style.borderColor = '#ff6b6b';
+    toast.style.color = '#ff6b6b';
+    toast.classList.add('show');
+    setTimeout(() => {
+      toast.classList.remove('show');
+      toast.style.borderColor = '';
+      toast.style.color = '';
+    }, 3000);
+    return;
+  }
+
+  // Disable button while sending
+  btn.textContent = 'Sending... ⏳';
+  btn.disabled = true;
+
+  const templateParams = {
+    name: name,
+    email: email,
+    message: msg,
+    time: new Date().toLocaleString()
+  };
+
+  emailjs.send('service_vg73zir', 'template_8qz8xks', templateParams)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+
+      toast.textContent = 'Message sent successfully! ✦';
+      toast.style.borderColor = '';
+      toast.style.color = '';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+
+      gsap.to('.form-submit', { scale: 1.07, duration: 0.15, yoyo: true, repeat: 1 });
+
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-email').value = '';
+      document.getElementById('f-msg').value = '';
+
+      btn.textContent = 'Send Message ✦';
+      btn.disabled = false;
+    })
+    .catch(function(error) {
+      console.error('FAILED...', error);
+
+      toast.textContent = 'Failed to send. Try again ✗';
+      toast.style.borderColor = '#ff6b6b';
+      toast.style.color = '#ff6b6b';
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+        toast.style.borderColor = '';
+        toast.style.color = '';
+      }, 3500);
+
+      btn.textContent = 'Send Message ✦';
+      btn.disabled = false;
+    });
+}
 </script>
 </body>
 
