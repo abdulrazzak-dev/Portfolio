@@ -303,7 +303,7 @@ nav {
 .orb2 { width: 280px; height: 280px; background: rgba(0,229,255,0.11); bottom: 8%; left: 4%; }
 .orb3 { width: 180px; height: 180px; background: rgba(176,111,255,0.14); top: 48%; right: 28%; }
 .scroll-indicator {
-  position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: 130px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   z-index: 3; opacity: 0;
 }
@@ -314,14 +314,15 @@ nav {
 
 /* ── TOOLS MARQUEE ── */
 .hero-marquee-wrap {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
   overflow: hidden;
-  margin-top: 32px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  z-index: 3;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 .tools-track {
   display: flex; gap: 16px; width: max-content;
@@ -832,7 +833,9 @@ footer { padding: 44px 5% 30px; border-top: 1px solid var(--border2); position: 
   .hamburger { display: flex; }
 
   /* Hero */
-  #hero { padding: 90px 5% 60px; align-items: flex-start; }
+  #hero { padding: 90px 5% 160px; align-items: flex-start; }
+  .hero-marquee-wrap { bottom: 50px; }
+  .scroll-indicator { display: none; }
   .hero-content { max-width: 100%; }
   .hero-h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
   .hero-role { font-size: clamp(0.85rem, 3.5vw, 1.1rem); }
