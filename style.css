@@ -233,9 +233,13 @@ nav {
    HERO
 ══════════════════════════════════════ */
 #hero {
-  position: relative; min-height: 100vh;
-  display: flex; align-items: center;
-  padding: 120px 5% 80px; overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 5% 0;
+  overflow: hidden;
 }
 .hero-spline { position: absolute; inset: 0; z-index: 0; opacity: 0.65; }
 .hero-spline iframe { width: 100%; height: 100%; }
@@ -251,7 +255,7 @@ nav {
               radial-gradient(ellipse at 80% 50%, rgba(0,100,200,0.06) 0%, transparent 50%),
               linear-gradient(to right, rgba(240,242,255,0.92) 0%, rgba(240,242,255,0.5) 60%, transparent 100%);
 }
-.hero-content { position: relative; z-index: 2; max-width: 680px; overflow: visible; }
+.hero-content { position: relative; z-index: 2; max-width: 680px; overflow: visible; margin-bottom: 120px; }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 0.74rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent2);
@@ -303,7 +307,7 @@ nav {
 .orb2 { width: 280px; height: 280px; background: rgba(0,229,255,0.11); bottom: 8%; left: 4%; }
 .orb3 { width: 180px; height: 180px; background: rgba(176,111,255,0.14); top: 48%; right: 28%; }
 .scroll-indicator {
-  position: absolute; bottom: 130px; left: 50%; transform: translateX(-50%);
+  position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   z-index: 3; opacity: 0;
 }
@@ -315,29 +319,36 @@ nav {
 /* ── TOOLS MARQUEE ── */
 .hero-marquee-wrap {
   position: absolute;
-  bottom: 70px;
+  bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
+  padding: 18px 0;
   overflow: hidden;
   z-index: 3;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  border-top: 1px solid var(--border);
+  background: linear-gradient(to top, rgba(3,3,8,0.55) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+[data-theme="light"] .hero-marquee-wrap {
+  background: linear-gradient(to top, rgba(240,242,255,0.7) 0%, transparent 100%);
 }
 .tools-track {
-  display: flex; gap: 16px; width: max-content;
-  animation: marquee 22s linear infinite;
+  display: flex; gap: 14px; width: max-content;
+  animation: marquee 26s linear infinite;
+  padding: 0 7px;
 }
 .tools-track:hover { animation-play-state: paused; }
 @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 .tool-chip {
   display: flex; align-items: center; gap: 8px;
   background: var(--surface); border: 1px solid var(--border2); border-radius: 500px;
-  padding: 9px 18px; white-space: nowrap;
-  font-size: 0.78rem; color: var(--muted); transition: all .3s;
+  padding: 7px 16px; white-space: nowrap;
+  font-size: 0.76rem; color: var(--muted); transition: all .3s;
 }
 .tool-chip:hover { border-color: var(--accent2); color: var(--text); }
-.tool-chip i { font-size: 0.9rem; color: var(--accent2); }
+.tool-chip i { font-size: 0.88rem; color: var(--accent2); }
 
 /* ══════════════════════════════════════
    ABOUT
@@ -833,10 +844,9 @@ footer { padding: 44px 5% 30px; border-top: 1px solid var(--border2); position: 
   .hamburger { display: flex; }
 
   /* Hero */
-  #hero { padding: 90px 5% 160px; align-items: flex-start; }
-  .hero-marquee-wrap { bottom: 50px; }
+  #hero { padding-top: 90px; justify-content: flex-start; }
+  .hero-content { max-width: 100%; margin-bottom: 90px; }
   .scroll-indicator { display: none; }
-  .hero-content { max-width: 100%; }
   .hero-h1 { font-size: clamp(2.2rem, 9vw, 3.2rem); }
   .hero-role { font-size: clamp(0.85rem, 3.5vw, 1.1rem); }
   .hero-subtitle { font-size: 0.82rem; max-width: 100%; margin-top: 12px; }
@@ -900,4 +910,8 @@ footer { padding: 44px 5% 30px; border-top: 1px solid var(--border2); position: 
 
   /* Hamburger menu mobile items full-size */
   .mobile-menu a { font-size: 1.7rem; }
+  /* Smaller chips on very small screens */
+  .tool-chip { padding: 5px 11px; font-size: 0.68rem; gap: 6px; }
+  .tool-chip i { font-size: 0.78rem; }
+  .tools-track { gap: 9px; }
 }
