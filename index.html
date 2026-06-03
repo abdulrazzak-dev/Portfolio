@@ -81,7 +81,7 @@
   <div class="glow-orb orb2"></div>
   <div class="glow-orb orb3"></div>
   <div class="hero-spline">
-    <iframe src='https://my.spline.design/orb-XXHFn0T5OsreRYO3XiXm2k7A/' frameborder='0' width='100%' height='100%'></iframe>
+    <iframe src='' frameborder='0' width='100%' height='100%'></iframe>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -963,8 +963,8 @@ function startMain() {
     }
   });
 
-  gsap.to('.social-btn', { boxShadow: '0 0 18px rgba(0,229,255,0.2)', duration: 1.8, repeat: -1, yoyo: true, stagger: 0.3 });
-  gsap.to('.form-submit', { boxShadow: '0 0 56px rgba(0,229,255,0.45)', duration: 1.5, repeat: -1, yoyo: true, ease: 'power1.inOut' });
+  gsap.to('.social-btn', { boxShadow: '0 0 18px rgba(var(--accent2-rgb), 0.2)', duration: 1.8, repeat: -1, yoyo: true, stagger: 0.3 });
+  gsap.to('.form-submit', { boxShadow: '0 0 56px rgba(var(--accent2-rgb), 0.45)', duration: 1.5, repeat: -1, yoyo: true, ease: 'power1.inOut' });
 
   gsap.fromTo('footer .footer-inner',
     { opacity: 0, y: 36, filter: 'blur(6px)' },
