@@ -392,7 +392,7 @@ nav {
 .hero-h1 .name-highlight {
   background: linear-gradient(135deg, var(--accent2), var(--accent));
   -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; 
 }
 
 .hero-role-wrap {
