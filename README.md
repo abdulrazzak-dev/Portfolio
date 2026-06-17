@@ -61,7 +61,7 @@ I'm a passionate **Frontend Web Developer** from Sri Lanka, dedicated to buildin
 
 | Project | Description | Stack | Live |
 |---|---|---|---|
-| **3D Design Portfolio** | Personal portfolio with animated 3D hero, smooth scroll, custom cursor & dark cyberpunk aesthetic | HTML · CSS · GSAP · Spline 3D | [🔗 Live](https://abdulrazzak-dev.github.io/Portfolio/) |
+| **Portfolio** | Personal portfolio, smooth scroll, custom cursor & dark cyberpunk aesthetic | HTML · CSS · GSAP  | [🔗 Live](https://abdulrazzak-dev.github.io/Portfolio/) |
 | **Golden Electrical** | Product catalogue for an electrical manufacturer with animated hero, product listings & quote system | HTML · CSS · JavaScript | [🔗 Live](https://abdulrazzak-dev.github.io/golden-electrical-storefront/) |
 | **Sweet Delights Bakery** | Elegant bakery website with product gallery, beautiful typography & contact form | HTML · CSS · WordPress | [🔗 Live](https://abdulrazzak-dev.github.io/sweet-delights-bakery/) |
 
