@@ -5,7 +5,7 @@
     <a href="https://abdulrazzak-dev.github.io/Portfolio/" target="_blank">
       <img src="https://img.shields.io/badge/Portfolio-Visit%20My%20Site-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" />
     </a>
-    <a href="www.linkedin.com/in/abdulrazzak-dev" target="_blank">
+    <a href="https://www.linkedin.com/in/abdulrazzak-dev" target="_blank">
       <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
     </a>
     <a href="https://x.com/abdulrazzak" target="_blank">
