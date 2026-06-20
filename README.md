@@ -5,7 +5,7 @@
     <a href="https://abdulrazzak-dev.github.io/Portfolio/" target="_blank">
       <img src="https://img.shields.io/badge/Portfolio-Visit%20My%20Site-blueviolet?style=for-the-badge&logo=google-chrome&logoColor=white" />
     </a>
-    <a href="https://www.linkedin.com/in/aha-razzak" target="_blank">
+    <a href="https://www.linkedin.com/in/abdulrazzak-dev" target="_blank">
       <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
     </a>
     <a href="https://x.com/abdulrazzak" target="_blank">
@@ -31,7 +31,7 @@ I'm a passionate **Frontend Web Developer** from Sri Lanka, dedicated to buildin
 - 🔒 Security-conscious development with best practices built in
 - 📱 Mobile-first, pixel-perfect responsive layouts across all devices
 - ✅ **Open to Work** — Available for freelance & full-time opportunities
-- ⭐ **100% Client Satisfaction** across 6+ projects
+- ⭐ **Across 6+ projects** 
 
 ---
 
@@ -53,8 +53,7 @@ I'm a passionate **Frontend Web Developer** from Sri Lanka, dedicated to buildin
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
-![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+
 
 ---
 
@@ -62,7 +61,7 @@ I'm a passionate **Frontend Web Developer** from Sri Lanka, dedicated to buildin
 
 | Project | Description | Stack | Live |
 |---|---|---|---|
-| **3D Design Portfolio** | Personal portfolio with animated 3D hero, smooth scroll, custom cursor & dark cyberpunk aesthetic | HTML · CSS · GSAP · Spline 3D | [🔗 Live](https://abdulrazzak-dev.github.io/Portfolio/) |
+| **Portfolio** | Personal portfolio, smooth scroll, custom cursor & dark cyberpunk aesthetic | HTML · CSS · GSAP  | [🔗 Live](https://abdulrazzak-dev.github.io/Portfolio/) |
 | **Golden Electrical** | Product catalogue for an electrical manufacturer with animated hero, product listings & quote system | HTML · CSS · JavaScript | [🔗 Live](https://abdulrazzak-dev.github.io/golden-electrical-storefront/) |
 | **Sweet Delights Bakery** | Elegant bakery website with product gallery, beautiful typography & contact form | HTML · CSS · WordPress | [🔗 Live](https://abdulrazzak-dev.github.io/sweet-delights-bakery/) |
 
